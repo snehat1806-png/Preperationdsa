@@ -8,6 +8,11 @@ public class palindrome {
             reverse=reverse*10+rem;
             num=num/10;
         }
-        
+    if(originalnum==reverse){
+        System.out.println("Palindrome number");
+    }
+    else{
+        System.out.println("Not palindrome");
+    }
     }
 }
