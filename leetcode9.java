@@ -13,15 +13,28 @@ public static void main(String[] args) {
 }    
 static int[] createTargetArray(int[] nums, int[] index) {
      
-        List<Integer> list=new ArrayList<>();
+    //     List<Integer> list=new ArrayList<>();
 
-        for(int i=0;i<nums.length;i++){
-         list.add(index[i],nums[i]);
+    //     for(int i=0;i<nums.length;i++){
+    //      list.add(index[i],nums[i]);
+    //     }
+    //     int[] target=new int[nums.length];
+    //     for(int i=0;i<nums.length;i++){
+    //         target[i]=list.get(i);
+    //     }
+    //  return target;
+    int[] target=new int[nums.length];
+    for(int i=0;i<nums.length;i++){
+        //if the index is same as the current index then we can directly put the element in the target array
+        if(index[i]==i){
+            target[index[i]]=nums[i];
+            continue;
         }
-        int[] target=new int[nums.length];
-        for(int i=0;i<nums.length;i++){
-            target[i]=list.get(i);
+        for(int j=target.length-1;j>index[i];j--){//shift the element to right and make space for the new element working from the end of the array or else we will overwrite the element at index[i]
+            target[j]=target[j-1];
         }
-     return target;
-    }
+        target[index[i]]=nums[i];
+     }
+        return target;
+}
 }
