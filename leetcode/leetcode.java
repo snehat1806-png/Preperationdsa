@@ -1,4 +1,3 @@
-package leetcode;
 public class leetcode {
 //https://leetcode.com/problems/build-array-from-permutation/submissions/1999064351/
     public static void main(String[] args) {
