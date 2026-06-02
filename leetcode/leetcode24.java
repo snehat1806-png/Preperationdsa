@@ -1,5 +1,5 @@
 public class leetcode24 {
- =//https://leetcode.com/problems/maximum-subarray/submissions/2016631954/
+ //https://leetcode.com/problems/maximum-subarray/submissions/2016631954/
     public static void main(String []args){
         int [] nums={-2,1,-3,4,-1,2,1,-5,4};
         System.out.println(maxSubArray(nums));
